@@ -1,0 +1,42 @@
+.jobForm{
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    padding: 2em;
+    height: 100%;
+}
+h1{
+    font-size: 2em;
+    text-align: center;
+}
+mat-form-field.mat-form-field {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+.hobby{
+    width: 80%;
+    align-self: flex-start;  
+}
+.hobbyList{
+    width: 100%;
+    position: relative; 
+    .deleteBtn{
+        padding: 5px;
+        position: absolute;
+        top: calc(50% - 3em);
+        right: -5em;
+    }
+}
+.addBtn{
+    margin: 0 auto;
+    padding: 0.5em;
+}
+.sendBtn{
+    margin: 2em auto;
+    padding: 1em;
+}
+
+
