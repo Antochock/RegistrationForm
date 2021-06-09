@@ -1,6 +1,6 @@
 import { DatePipe } from '@angular/common';
 import { Component, OnInit, } from '@angular/core';
-import { FormBuilder, FormGroup, FormArray, Validators, AsyncValidatorFn, ValidationErrors, FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, FormArray, Validators, AsyncValidatorFn, ValidationErrors} from '@angular/forms';
 import {AbstractControl} from '@angular/forms';
 import { MAT_DATE_FORMATS} from '@angular/material/core';
 import {Observable, of} from 'rxjs';
@@ -69,7 +69,6 @@ export class QstnFormComponent implements OnInit {
   ngOnInit(): void {
     this.addHobby();
     this.jobForm.valueChanges.subscribe(() =>{
-      console.log(this.jobForm.status)
       this.jobForm.value.dateOfBirth = this.datePipe.transform(this.jobForm.value.dateOfBirth, 'dd-MM-yyyy')
     })
   }
@@ -106,11 +105,6 @@ export class QstnFormComponent implements OnInit {
   deleteHobby(i:number){
     this.hobbyForm.removeAt(i)
   }
-
-  // validateHobby(hobby: FormArray){
-  //   console.log(hobby)
-  //   return (hobby.controls[0].invalid || hobby.value[0].duration == []) ? null : {name : {msg: 'Cmon, you must to have at lest 1 hobby'}}
-  // }
 
   serverResponse(): AsyncValidatorFn {  
     return (control: AbstractControl): Observable<ValidationErrors | null> => {
