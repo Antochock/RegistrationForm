@@ -24,7 +24,6 @@ import { QstnFormComponent } from './qstn-form/qstn-form.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    MatDatepickerModule,
     MatInputModule,
     MatNativeDateModule,
     BrowserAnimationsModule,
